@@ -1,5 +1,5 @@
 import { Target, Users, Award, Zap } from "lucide-react";
-import Cheers from "../assets/Cheers.mp4";
+import game from "../assets/game.jpg";
 import { Badge } from "lucide-react";
 import ShinyText from "../layout/ShinyText";
 import { motion } from "motion/react";
@@ -68,11 +68,9 @@ export function About() {
               className="relative rounded-2xl overflow-hidden shadow-2xl"
               whileHover={{ scale: 1.02 }}
             >
-              <video
-                src={Cheers}
-                autoPlay
-                muted
-                loop
+              <img
+                src={game}
+                alt="Game"
                 className="w-full h-96 md:h-125 object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -161,36 +159,34 @@ export function About() {
               className="mt-6 md:mt-8 flex flex-wrap gap-3 md:gap-4"
               variants={containerVariants}
             >
-              {[
-                "Pro Gaming Setup",
-                "24/7 Open",
-                "Premium Snacks",
-              ].map((badge, idx) => (
-                <motion.div
-                  key={idx}
-                  className="flex items-center gap-2 bg-[#1a1a2e] px-4 py-2 rounded-lg border border-[#9333ea]/30"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, borderColor: "#06b6d4" }}
-                >
-                  {/* <div className="w-2 h-2 bg-[#9333ea] rounded-full"></div> */}
-                  <Badge />
-                  <span className="text-xs md:text-sm font-medium">
-                    {/* {badge} */}
-                    <ShinyText
-                      text={badge}
-                      speed={2}
-                      delay={0}
-                      color="#e0e0ff"
-                      shineColor="#06b6d4"
-                      spread={120}
-                      direction="left"
-                      yoyo={false}
-                      pauseOnHover={false}
-                      disabled={false}
-                    />
-                  </span>
-                </motion.div>
-              ))}
+              {["Pro Gaming Setup", "24/7 Open", "Premium Snacks"].map(
+                (badge, idx) => (
+                  <motion.div
+                    key={idx}
+                    className="flex items-center gap-2 bg-[#1a1a2e] px-4 py-2 rounded-lg border border-[#9333ea]/30"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05, borderColor: "#06b6d4" }}
+                  >
+                    {/* <div className="w-2 h-2 bg-[#9333ea] rounded-full"></div> */}
+                    <Badge />
+                    <span className="text-xs md:text-sm font-medium">
+                      {/* {badge} */}
+                      <ShinyText
+                        text={badge}
+                        speed={2}
+                        delay={0}
+                        color="#e0e0ff"
+                        shineColor="#06b6d4"
+                        spread={120}
+                        direction="left"
+                        yoyo={false}
+                        pauseOnHover={false}
+                        disabled={false}
+                      />
+                    </span>
+                  </motion.div>
+                ),
+              )}
             </motion.div>
           </motion.div>
         </div>
