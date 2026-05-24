@@ -2,6 +2,7 @@
 import ShinyText from "../layout/ShinyText";
 import React, { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { Gamepad2 } from "lucide-react";
 import { cn } from "../lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
@@ -56,7 +57,7 @@ export const NavBody = ({ children, className, visible }) => {
       transition={{ type: "spring", stiffness: 200, damping: 50 }}
       style={{ minWidth: "800px" }}
       className={cn(
-        "relative z-60 mx-auto hidden w-full max-w-7xl items-center justify-between rounded-full px-4 py-1 lg:flex",
+        "relative z-60 mx-auto hidden w-full max-w-7xl items-center justify-between rounded-full px-2 py-1 lg:flex",
         visible ? "bg-primaryLinear" : "bg-bg_light_primary",
         className,
       )}
@@ -79,7 +80,7 @@ export const NavItems = ({ items, className, onItemClick }) => {
           key={item.link}
           href={item.link}
           onClick={onItemClick}
-          className="rounded-full px-4 py-2 font-semibold text-gray-950 hover:bg-white transition"
+          className="rounded-full px-4 py-2 font-semibold text-[#06b6d4] hover:bg-white transition"
         >
           {item.name}
         </a>
@@ -102,7 +103,7 @@ export const MobileNav = ({ children, className, visible }) => {
       transition={{ type: "spring", stiffness: 200, damping: 40 }}
       className={cn(
         "relative z-50 mx-auto flex w-full flex-col rounded-2xl px-4 py-2 lg:hidden",
-        visible && "bg-white/80",
+        visible && "bg-[#9233ea5d]",
         className,
       )}
     >
@@ -150,7 +151,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
           {/* Fullscreen Menu */}
           <motion.div
             className={cn(
-              "fixed inset-0 z-1000 flex h-screen w-screen flex-col bg-gray-50 lg:hidden",
+              "fixed inset-0 z-1000 flex h-screen w-screen flex-col bg-[#9233ea5d] lg:hidden",
               className,
             )}
             initial={{ x: "-100%" }}
@@ -161,18 +162,19 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="fixed right-4 top-4 z-1100 rounded-xl bg-red-500 p-2.5 hover:bg-red-600/10"
+              className="fixed right-4 top-4 z-1100 rounded-xl bg-[#9333ea] p-2.5 hover:bg-red-600/10"
             >
               <IconX className="h-6 w-6 text-white" />
             </button>
 
             {/* Header */}
-            <div className="relative z-10 flex items-center gap-3 border-b bg-white/80 p-6 backdrop-blur">
+            <div className="relative z-10 flex items-center gap-3 border-b bg-[#9233ea5d] p-6 backdrop-blur">
               {/* Logo */}
               <div className="flex items-center gap-2">
+                <Gamepad2 />
                 <span className="font-bold text-xl tracking-tight">
                   <ShinyText
-                    text="UN"
+                    text="DANSHE"
                     speed={2}
                     delay={0}
                     color="#000000"
@@ -184,10 +186,10 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
                     disabled={false}
                   />
                 </span>
-                <div className="w-0.5 h-6 bg-[#FF0000]"></div>
+                <div className="w-0.5 h-6 bg-[#9333ea]"></div>
                 <span className="font-bold text-xl tracking-tight">
                   <ShinyText
-                    text="REEL"
+                    text="GAMING"
                     speed={2}
                     delay={0}
                     color="#000000"
@@ -240,7 +242,7 @@ export const NavbarLogo = () => {
       <div className="flex items-center gap-2">
         <span className="font-bold text-xl tracking-tight">
           <ShinyText
-            text="GAMING"
+            text="DANSHE"
             speed={2}
             delay={0}
             color="#e0e0ff"
@@ -255,7 +257,7 @@ export const NavbarLogo = () => {
         <div className="w-0.5 h-6 bg-[#9333ea]"></div>
         <span className="font-bold text-xl tracking-tight">
           <ShinyText
-            text="CAFE"
+            text="GAMING"
             speed={2}
             delay={0}
             color="#e0e0ff"

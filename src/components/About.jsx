@@ -1,6 +1,6 @@
 import { Target, Users, Award, Zap } from "lucide-react";
 import game from "../assets/game.jpg";
-import { Badge } from "lucide-react";
+import { Gamepad2 } from "lucide-react";
 import ShinyText from "../layout/ShinyText";
 import { motion } from "motion/react";
 
@@ -168,7 +168,7 @@ export function About() {
                     whileHover={{ scale: 1.05, borderColor: "#06b6d4" }}
                   >
                     {/* <div className="w-2 h-2 bg-[#9333ea] rounded-full"></div> */}
-                    <Badge />
+                    <Gamepad2 />
                     <span className="text-xs md:text-sm font-medium">
                       {/* {badge} */}
                       <ShinyText

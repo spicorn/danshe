@@ -1,16 +1,16 @@
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = id => {
-    const element = document.getElementById(id)
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setIsOpen(false)
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
     }
-  }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/10">
@@ -18,46 +18,46 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl tracking-tight">UN</span>
-            <div className="w-0.5 h-6 bg-[#FF0000]"></div>
-            <span className="font-bold text-xl tracking-tight">REEL</span>
+            <span className="font-bold text-xl tracking-tight">DANSHE</span>
+            <div className="w-0.5 h-6 bg-[#9333ea]"></div>
+            <span className="font-bold text-xl tracking-tight">GAMING</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-sm font-medium hover:text-[#FF0000] transition-colors"
+              className="text-sm font-medium hover:text-[#9333ea] transition-colors"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-sm font-medium hover:text-[#FF0000] transition-colors"
+              className="text-sm font-medium hover:text-[#9333ea] transition-colors"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-sm font-medium hover:text-[#FF0000] transition-colors"
+              className="text-sm font-medium hover:text-[#9333ea] transition-colors"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="text-sm font-medium hover:text-[#FF0000] transition-colors"
+              className="text-sm font-medium hover:text-[#9333ea] transition-colors"
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className="text-sm font-medium hover:text-[#FF0000] transition-colors"
+              className="text-sm font-medium hover:text-[#9333ea] transition-colors"
             >
               Prices
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="bg-[#FF0000] text-white px-6 py-2 rounded-md hover:bg-[#cc0000] transition-colors"
+              className="bg-[#9333ea] text-white px-6 py-2 rounded-md hover:bg-[#9333ea] transition-colors"
             >
               Get Started
             </button>
@@ -76,37 +76,37 @@ export function Navbar() {
           <div className="px-4 py-4 space-y-3">
             <button
               onClick={() => scrollToSection("home")}
-              className="block w-full text-left py-2 text-sm font-medium hover:text-[#FF0000]"
+              className="block w-full text-left py-2 text-sm font-medium hover:text-[#9333ea]"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block w-full text-left py-2 text-sm font-medium hover:text-[#FF0000]"
+              className="block w-full text-left py-2 text-sm font-medium hover:text-[#9333ea]"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left py-2 text-sm font-medium hover:text-[#FF0000]"
+              className="block w-full text-left py-2 text-sm font-medium hover:text-[#9333ea]"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="block w-full text-left py-2 text-sm font-medium hover:text-[#FF0000]"
+              className="block w-full text-left py-2 text-sm font-medium hover:text-[#9333ea]"
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className="block w-full text-left py-2 text-sm font-medium hover:text-[#FF0000]"
+              className="block w-full text-left py-2 text-sm font-medium hover:text-[#9333ea]"
             >
               Prices
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="w-full bg-[#FF0000] text-white px-6 py-2 rounded-md hover:bg-[#cc0000] transition-colors"
+              className="w-full bg-[#9333ea] text-white px-6 py-2 rounded-md hover:bg-[#cc0000] transition-colors"
             >
               Get Started
             </button>
@@ -114,5 +114,5 @@ export function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

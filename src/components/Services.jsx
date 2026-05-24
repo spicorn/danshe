@@ -8,6 +8,14 @@ import {
   Palette,
   Smartphone,
 } from "lucide-react";
+import end from "../assets/end.jpg";
+import Fifa from "../assets/fifa.jpg";
+import Forza from "../assets/Forza.jpg";
+import ps from "../assets/ps.jpg";
+import xbox from "../assets/xbox.jpg";
+import Ghost from "../assets/ghost.jpg";
+import room from "../assets/room.jpg";
+import setup from "../assets/setup.jpg";
 import { motion } from "motion/react";
 
 const services = [
@@ -16,64 +24,56 @@ const services = [
     title: "High-End Gaming PCs",
     description:
       "Latest high-performance gaming rigs with RTX graphics, high refresh rate monitors, and mechanical keyboards for the ultimate competitive edge.",
-    image:
-      "https://images.pexels.com/photos/7772220/pexels-photo-7772220.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: end,
   },
   {
     icon: Video,
     title: "Tournaments & Competitions",
     description:
       "Regular esports tournaments with prize pools, coaching sessions, and opportunities to compete with the gaming community.",
-    image:
-      "https://images.pexels.com/photos/7915288/pexels-photo-7915288.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: Fifa,
   },
   {
     icon: Palette,
     title: "Premium Seats & Setup",
     description:
       "Ergonomic gaming chairs, noise-cancelling headsets, RGB lighting, and custom desk setups for maximum comfort.",
-    image:
-      "https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: room,
   },
   {
     icon: Smartphone,
     title: "Streaming Studio",
     description:
       "Professional streaming setups with green screens, multi-camera systems, and broadcasting equipment for content creators.",
-    image:
-      "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: setup,
   },
   {
     icon: Globe,
     title: "Gaming Cafe Lounge",
     description:
       "Comfortable social spaces, VR gaming zones, arcade games, and chill-out areas for breaks between matches.",
-    image:
-      "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: Ghost,
   },
   {
     icon: TrendingUp,
     title: "Food & Beverages",
     description:
       "Gamer's fuel: energy drinks, snacks, full meals, and specialty coffee to keep you going during intense sessions.",
-    image:
-      "https://images.pexels.com/photos/2438049/pexels-photo-2438049.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: Forza,
   },
   {
     icon: Megaphone,
     title: "Community Events",
     description:
       "Meetups, LAN parties, gaming nights, and social events to connect with fellow gamers and build lasting friendships.",
-    image:
-      "https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: ps,
   },
   {
     icon: BarChart3,
     title: "Membership Rewards",
     description:
       "Loyalty program with exclusive perks, early tournament access, discounts on food, and special member events.",
-    image:
-      "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: xbox,
   },
 ];
 
@@ -109,7 +109,10 @@ export function Services() {
           transition={{ duration: 0.6 }}
           viewport={{ margin: "-100px" }}
         >
-          <motion.div className="inline-block px-4 py-1.5 bg-[#9333ea]/20 rounded-full mb-4" whileHover={{ scale: 1.05 }}>
+          <motion.div
+            className="inline-block px-4 py-1.5 bg-[#9333ea]/20 rounded-full mb-4"
+            whileHover={{ scale: 1.05 }}
+          >
             <span className="text-[#06b6d4] text-xs md:text-sm font-medium">
               Our Offerings
             </span>
@@ -130,7 +133,9 @@ export function Services() {
             transition={{ delay: 0.3, duration: 0.6 }}
             viewport={{}}
           >
-            From state-of-the-art gaming PCs to tournaments and community events, we provide everything gamers need for an unforgettable experience.
+            From state-of-the-art gaming PCs to tournaments and community
+            events, we provide everything gamers need for an unforgettable
+            experience.
           </motion.p>
         </motion.div>
 
@@ -208,9 +213,13 @@ export function Services() {
           transition={{ duration: 0.6 }}
           viewport={{}}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Join the Arena?</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Ready to Join the Arena?
+          </h3>
           <p className="text-sm md:text-base text-gray-300 mb-6 max-w-2xl mx-auto">
-            Choose the perfect membership plan and start your gaming journey with us. Access high-end gaming stations, tournaments, and a vibrant community.
+            Choose the perfect membership plan and start your gaming journey
+            with us. Access high-end gaming stations, tournaments, and a vibrant
+            community.
           </p>
           <motion.button
             className="bg-[#9333ea] text-white px-6 md:px-8 py-3 rounded-lg hover:bg-[#7e22ce] transition-colors font-medium"
