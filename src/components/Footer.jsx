@@ -51,13 +51,17 @@ export function Footer() {
         >
           {/* Brand */}
           <motion.div className="md:col-span-1" variants={itemVariants}>
-            <motion.div className="flex items-center gap-2 mb-4" whileHover={{ scale: 1.05 }}>
-              <span className="font-bold text-lg md:text-xl">UN</span>
-              <div className="w-0.5 h-6 bg-[#FF0000]"></div>
-              <span className="font-bold text-lg md:text-xl">REEL</span>
+            <motion.div
+              className="flex items-center gap-2 mb-4"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="font-bold text-lg md:text-xl">DANSHE</span>
+              <div className="w-0.5 h-6 bg-[#9333ea]"></div>
+              <span className="font-bold text-lg md:text-xl">GAMING</span>
             </motion.div>
             <p className="text-gray-400 text-xs md:text-sm mb-4">
-              Unreal stories with real impact
+              Game. Chill. Repeat. Join the DANSHE revolution and elevate your
+              gaming experience to new heights. Sign up for our free
             </p>
             <div className="flex gap-3">
               {[0, 1, 2, 3].map((idx) => (
@@ -76,8 +80,13 @@ export function Footer() {
 
           {/* Services */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold mb-4 text-sm md:text-base">Services</h4>
-            <motion.ul className="space-y-2 text-xs md:text-sm text-gray-400" variants={containerVariants}>
+            <h4 className="font-semibold mb-4 text-sm md:text-base">
+              Services
+            </h4>
+            <motion.ul
+              className="space-y-2 text-xs md:text-sm text-gray-400"
+              variants={containerVariants}
+            >
               {[
                 { label: "Brand Identity", href: "#services" },
                 { label: "Photography", href: "#services" },
@@ -100,7 +109,10 @@ export function Footer() {
           {/* Company */}
           <motion.div variants={itemVariants}>
             <h4 className="font-semibold mb-4 text-sm md:text-base">Company</h4>
-            <motion.ul className="space-y-2 text-xs md:text-sm text-gray-400" variants={containerVariants}>
+            <motion.ul
+              className="space-y-2 text-xs md:text-sm text-gray-400"
+              variants={containerVariants}
+            >
               {[
                 { label: "About Us", href: "#about" },
                 { label: "Pricing", href: "#pricing" },
@@ -122,7 +134,9 @@ export function Footer() {
 
           {/* Newsletter */}
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold mb-4 text-sm md:text-base">Stay Updated</h4>
+            <h4 className="font-semibold mb-4 text-sm md:text-base">
+              Stay Updated
+            </h4>
             <p className="text-xs md:text-sm text-gray-400 mb-4">
               Get marketing tips and creative insights delivered to your inbox.
             </p>
@@ -152,8 +166,11 @@ export function Footer() {
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div>© {currentYear} UNREEL MEDIA. All rights reserved.</div>
-          <motion.div className="flex gap-4 md:gap-6" variants={containerVariants}>
+          <div>© {currentYear} DANSHE GAMING. All rights reserved.</div>
+          <motion.div
+            className="flex gap-4 md:gap-6"
+            variants={containerVariants}
+          >
             {[
               { label: "Privacy Policy", href: "#" },
               { label: "Terms of Service", href: "#" },

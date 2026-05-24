@@ -57,7 +57,10 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ margin: "-100px" }}
         >
-          <motion.div className="inline-block px-4 py-1.5 bg-[#9333ea]/20 rounded-full mb-4" whileHover={{ scale: 1.05 }}>
+          <motion.div
+            className="inline-block px-4 py-1.5 bg-[#9333ea]/20 rounded-full mb-4"
+            whileHover={{ scale: 1.05 }}
+          >
             <span className="text-[#06b6d4] text-xs md:text-sm font-medium">
               Get In Touch
             </span>
@@ -78,7 +81,8 @@ export function Contact() {
             transition={{ delay: 0.3, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Contact us to book your gaming sessions, join tournaments, or rent our streaming studio. Let's level up together!
+            Contact us to book your gaming sessions, join tournaments, or rent
+            our streaming studio. Let's level up together!
           </motion.p>
         </motion.div>
 
@@ -93,9 +97,24 @@ export function Contact() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               {[
-                { name: "name", label: "Full Name *", placeholder: "Dancel Mautsa", type: "text" },
-                { name: "email", label: "Email Address *", placeholder: "unreel@gmail.com", type: "email" },
-                { name: "company", label: "Company Name", placeholder: "Your Company", type: "text" },
+                {
+                  name: "name",
+                  label: "Full Name *",
+                  placeholder: "Dancel Mautsa",
+                  type: "text",
+                },
+                {
+                  name: "email",
+                  label: "Email Address *",
+                  placeholder: "danshe@gmail.com",
+                  type: "email",
+                },
+                {
+                  name: "company",
+                  label: "Company Name",
+                  placeholder: "Your Company",
+                  type: "text",
+                },
               ].map((field, idx) => (
                 <motion.div
                   key={idx}
@@ -104,7 +123,10 @@ export function Contact() {
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <label htmlFor={field.name} className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor={field.name}
+                    className="block text-sm font-medium mb-2"
+                  >
                     {field.label}
                   </label>
                   <motion.input
@@ -127,7 +149,10 @@ export function Contact() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
                   Tell us about your project *
                 </label>
                 <motion.textarea
@@ -166,14 +191,19 @@ export function Contact() {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-4 md:mb-6">Let's Connect</h3>
               <p className="text-sm md:text-base text-gray-300 mb-6 md:mb-8">
-                Ready to join the ultimate gaming arena? Reach out to us to book your first session, inquire about membership, or rent our professional streaming studio.
+                Ready to join the ultimate gaming arena? Reach out to us to book
+                your first session, inquire about membership, or rent our
+                professional streaming studio.
               </p>
             </motion.div>
 
-            <motion.div className="space-y-4 md:space-y-6" variants={containerVariants}>
+            <motion.div
+              className="space-y-4 md:space-y-6"
+              variants={containerVariants}
+            >
               {[
-                { icon: Mail, title: "Email Us", links: ["hello@unreelmedia.com"] },
-                { icon: Phone, title: "Call Us", links: ["+263 71 753 1571", "+263 78 782 8366"] },
+                { icon: Mail, title: "Email Us", links: ["hello@danshe.com"] },
+                { icon: Phone, title: "Call Us", links: ["+263 78 782 8366"] },
               ].map((contact, idx) => (
                 <motion.div
                   key={idx}
@@ -188,11 +218,17 @@ export function Contact() {
                     <contact.icon className="w-6 h-6 text-[#06b6d4]" />
                   </motion.div>
                   <div>
-                    <div className="font-semibold mb-1 text-sm md:text-base">{contact.title}</div>
+                    <div className="font-semibold mb-1 text-sm md:text-base">
+                      {contact.title}
+                    </div>
                     {contact.links.map((link, linkIdx) => (
                       <a
                         key={linkIdx}
-                        href={contact.icon === Mail ? `mailto:${link}` : `tel:${link}`}
+                        href={
+                          contact.icon === Mail
+                            ? `mailto:${link}`
+                            : `tel:${link}`
+                        }
                         className="text-xs md:text-sm text-gray-300 hover:text-[#06b6d4] transition-colors block"
                       >
                         {link}
@@ -209,7 +245,9 @@ export function Contact() {
               variants={itemVariants}
               whileHover={{ scale: 1.02, y: -8 }}
             >
-              <h4 className="text-lg md:text-xl font-bold mb-3">Try Before You Commit</h4>
+              <h4 className="text-lg md:text-xl font-bold mb-3">
+                Try Before You Commit
+              </h4>
               <p className="text-xs md:text-sm text-gray-300 mb-6">
                 Not ready for a retainer? Start with our discounted one-month
                 trial offer and experience the UNREEL difference.

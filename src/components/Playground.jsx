@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Monitor, Gamepad2 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import end from "../assets/end.jpg";
+import Fifa from "../assets/fifa.jpg";
+import Forza from "../assets/Forza.jpg";
+import ps from "../assets/ps.jpg";
+import xbox from "../assets/xbox.jpg";
+import Ghost from "../assets/ghost.jpg";
+import room from "../assets/room.jpg";
+import setup from "../assets/setup.jpg";
+import high from "../assets/high.jpg";
 
 const portfolioItems = [
   {
@@ -8,8 +17,7 @@ const portfolioItems = [
     title: "RTX Battle Station",
     category: "pc",
     type: "High-End PC",
-    image:
-      "https://images.pexels.com/photos/7772220/pexels-photo-7772220.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: high,
     description:
       "Competitive players on our RTX 4090 rigs with 240Hz monitors and pro peripherals.",
     icon: Monitor,
@@ -19,8 +27,7 @@ const portfolioItems = [
     title: "FPS Squad Nights",
     category: "pc",
     type: "High-End PC",
-    image:
-      "https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: end,
     description:
       "Teams grinding ranked matches together on dedicated high-performance PC lanes.",
     icon: Monitor,
@@ -30,8 +37,7 @@ const portfolioItems = [
     title: "LAN Party Zone",
     category: "pc",
     type: "High-End PC",
-    image:
-      "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: room,
     description:
       "Group sessions on premium gaming PCs — perfect for friends, clans, and tournaments.",
     icon: Monitor,
@@ -41,8 +47,7 @@ const portfolioItems = [
     title: "PlayStation Lounge",
     category: "playstation",
     type: "PlayStation",
-    image:
-      "https://images.pexels.com/photos/4522994/pexels-photo-4522994.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: ps,
     description:
       "Cozy couch setups with PS5 consoles for FIFA, fighting games, and co-op adventures.",
     icon: Gamepad2,
@@ -52,8 +57,7 @@ const portfolioItems = [
     title: "Couch Co-Op Sessions",
     category: "playstation",
     type: "PlayStation",
-    image:
-      "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: Fifa,
     description:
       "Friends battling it out on PlayStation with big-screen TVs and surround sound.",
     icon: Gamepad2,
@@ -63,8 +67,7 @@ const portfolioItems = [
     title: "Console Tournament Night",
     category: "playstation",
     type: "PlayStation",
-    image:
-      "https://images.pexels.com/photos/7915288/pexels-photo-7915288.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: Forza,
     description:
       "Weekly PlayStation brackets with prizes, spectators, and hype on the big screen.",
     icon: Gamepad2,
@@ -74,8 +77,7 @@ const portfolioItems = [
     title: "Xbox Arena",
     category: "xbox",
     type: "Xbox",
-    image:
-      "https://images.pexels.com/photos/7861751/pexels-photo-7861751.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: xbox,
     description:
       "Xbox Series X stations for Halo, Forza, and Game Pass favorites in premium booths.",
     icon: Gamepad2,
@@ -85,8 +87,7 @@ const portfolioItems = [
     title: "Racing & Sports Bar",
     category: "xbox",
     type: "Xbox",
-    image:
-      "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: Ghost,
     description:
       "Wheel setups and Xbox lounges for racing sims, sports titles, and party games.",
     icon: Gamepad2,
@@ -96,8 +97,7 @@ const portfolioItems = [
     title: "Xbox Community Night",
     category: "xbox",
     type: "Xbox",
-    image:
-      "https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: setup,
     description:
       "Gamers linking up on Xbox for online nights, local multiplayer, and clan meetups.",
     icon: Gamepad2,
