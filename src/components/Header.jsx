@@ -18,7 +18,7 @@ export function Header() {
     { name: "About", link: "#skills" },
     { name: "Services", link: "#services" },
     { name: "Portfolio", link: "#portfolio" },
-    { name: "Prices", link: "#prices" },
+    { name: "Leaderboard", link: "#leaderboard" },
     // { name: "Contact Us", link: "#contact" },
   ];
 
