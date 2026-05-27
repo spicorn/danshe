@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const mockTournamentData = [
   {
     id: 1,
-    name: "ShadowNinja",
+    name: "spicorn",
     points: 2850,
     weeklyPoints: 450,
     rank: 1,
@@ -17,7 +17,7 @@ const mockTournamentData = [
   },
   {
     id: 2,
-    name: "PhantomGhost",
+    name: "Jack",
     points: 2650,
     weeklyPoints: 420,
     rank: 2,
@@ -28,7 +28,7 @@ const mockTournamentData = [
   },
   {
     id: 3,
-    name: "TitanForce",
+    name: "Kelvin",
     points: 2420,
     weeklyPoints: 390,
     rank: 3,
@@ -39,7 +39,7 @@ const mockTournamentData = [
   },
   {
     id: 4,
-    name: "IceQueen",
+    name: "Rasta",
     points: 2180,
     weeklyPoints: 360,
     rank: 4,
@@ -50,7 +50,7 @@ const mockTournamentData = [
   },
   {
     id: 5,
-    name: "InfernoKing",
+    name: "Babavawo",
     points: 1950,
     weeklyPoints: 330,
     rank: 5,
@@ -61,7 +61,7 @@ const mockTournamentData = [
   },
   {
     id: 6,
-    name: "SonicBolt",
+    name: "Mukoma",
     points: 1820,
     weeklyPoints: 300,
     rank: 6,
@@ -72,7 +72,7 @@ const mockTournamentData = [
   },
   {
     id: 7,
-    name: "NeonNinja",
+    name: "Chibaba",
     points: 1650,
     weeklyPoints: 280,
     rank: 7,
@@ -83,7 +83,7 @@ const mockTournamentData = [
   },
   {
     id: 8,
-    name: "VortexViper",
+    name: "Huruyadzo",
     points: 1480,
     weeklyPoints: 250,
     rank: 8,
@@ -181,7 +181,7 @@ export function Leaderboard() {
   return (
     <section id="leaderboard" className="relative w-full py-20 px-4 md:px-8">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-slate-900/50 via-slate-900/20 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
@@ -194,7 +194,7 @@ export function Leaderboard() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <Crown className="w-8 h-8 text-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Champion Leaderboard
             </h2>
             <Crown className="w-8 h-8 text-purple-400" />
@@ -225,7 +225,7 @@ export function Leaderboard() {
           ].map((stat, idx) => (
             <motion.div
               key={idx}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-slate-700 p-4 text-center backdrop-blur-sm"
+              className="bg-linear-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-slate-700 p-4 text-center backdrop-blur-sm"
               whileHover={{ scale: 1.05, borderColor: "#cbd5e1" }}
               transition={{ duration: 0.3 }}
             >
@@ -247,8 +247,8 @@ export function Leaderboard() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700 backdrop-blur-sm overflow-hidden">
-              <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 px-6 py-4 border-b border-slate-700">
+            <div className="bg-linear-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700 backdrop-blur-sm overflow-hidden">
+              <div className="bg-linear-to-r from-purple-600/20 to-cyan-600/20 px-6 py-4 border-b border-slate-700">
                 <h3 className="text-xl font-bold text-white flex items-center gap-2">
                   <Trophy className="w-6 h-6 text-purple-400" />
                   Tournament Rankings
@@ -275,7 +275,7 @@ export function Leaderboard() {
                       }`}
                     >
                       {/* Rank Badge */}
-                      <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                      <div className="shrink-0 w-10 h-10 flex items-center justify-center">
                         <RankBadge rank={player.rank} />
                       </div>
 
@@ -287,7 +287,7 @@ export function Leaderboard() {
                             {player.name}
                           </h4>
                           {player.streak >= 5 && (
-                            <Flame className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                            <Flame className="w-4 h-4 text-purple-400 shrink-0" />
                           )}
                         </div>
                         <div className="flex flex-wrap gap-2">
@@ -305,7 +305,7 @@ export function Leaderboard() {
                       </div>
 
                       {/* Points and Streak */}
-                      <div className="flex-shrink-0 text-right">
+                      <div className="shrink-0 text-right">
                         <div className="text-white font-bold text-lg">
                           {displayPoints[player.id] || 0}
                           <span className="text-xs text-purple-400 ml-1">
@@ -322,7 +322,7 @@ export function Leaderboard() {
                     {/* Hover highlight for top 3 */}
                     {player.rank <= 3 && hoveredRank === player.rank && (
                       <motion.div
-                        className={`absolute inset-0 bg-gradient-to-r ${getRankColor(
+                        className={`absolute inset-0 bg-linear-to-r ${getRankColor(
                           player.rank,
                         )} opacity-10 pointer-events-none`}
                         layoutId={`rank-${player.rank}`}
@@ -348,8 +348,8 @@ export function Leaderboard() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="sticky top-24">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700 backdrop-blur-sm overflow-hidden">
-                <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 px-6 py-4 border-b border-slate-700">
+              <div className="bg-linear-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700 backdrop-blur-sm overflow-hidden">
+                <div className="bg-linear-to-r from-purple-600/20 to-cyan-600/20 px-6 py-4 border-b border-slate-700">
                   <h3 className="text-lg font-bold text-white flex items-center gap-2">
                     <Star className="w-5 h-5 text-purple-400" />
                     Weekly Top 5
@@ -360,7 +360,7 @@ export function Leaderboard() {
                   {weeklyTopPlayers.map((player, idx) => (
                     <motion.div
                       key={player.id}
-                      className="bg-gradient-to-r from-slate-700/30 to-slate-800/30 rounded-lg p-3 border border-slate-600 hover:border-slate-500 transition-all cursor-pointer group"
+                      className="bg-linear-to-r from-slate-700/30 to-slate-800/30 rounded-lg p-3 border border-slate-600 hover:border-slate-500 transition-all cursor-pointer group"
                       whileHover={{ scale: 1.05 }}
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -389,7 +389,7 @@ export function Leaderboard() {
                         viewport={{ once: true }}
                       >
                         <motion.div
-                          className="h-full bg-gradient-to-r from-purple-400 to-cyan-400"
+                          className="h-full bg-linear-to-r from-purple-400 to-cyan-400"
                           initial={{ width: 0 }}
                           whileInView={{
                             width: `${
@@ -412,7 +412,7 @@ export function Leaderboard() {
                     <p className="text-slate-400 text-xs mb-2">
                       Achievement Unlocked
                     </p>
-                    <div className="inline-block bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500 rounded-lg px-3 py-2">
+                    <div className="inline-block bg-linear-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500 rounded-lg px-3 py-2">
                       <span className="text-purple-300 text-sm font-bold flex items-center gap-1 justify-center">
                         <Star className="w-4 h-4" />
                         Rank Champion
@@ -438,7 +438,7 @@ export function Leaderboard() {
           </p>
           <motion.a
             href="#contact"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg transition-all"
+            className="inline-block px-8 py-3 bg-linear-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg transition-all"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(147, 51, 234, 0.3)",

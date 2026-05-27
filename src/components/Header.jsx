@@ -17,7 +17,7 @@ export function Header() {
     { name: "Home", link: "#home" },
     { name: "About", link: "#skills" },
     { name: "Services", link: "#services" },
-    { name: "Portfolio", link: "#portfolio" },
+    { name: "PlayGround", link: "#portfolio" },
     { name: "Leaderboard", link: "#leaderboard" },
     // { name: "Contact Us", link: "#contact" },
   ];
